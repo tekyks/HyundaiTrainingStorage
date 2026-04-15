@@ -1,0 +1,13 @@
+# READ Books
+# GET http://localhost:8080/odata/v4/bookshop/Books
+
+
+# CREATE Books
+
+POST http://localhost:8080/odata/v4/bookshop/Books
+Content-Type: application/json
+
+{
+    "ID": 3,
+    "title": "4 Hours Work week"
+}

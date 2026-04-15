@@ -1,0 +1,176 @@
+# ============================================================
+# .gitignore for SAP CAP Java (Spring Boot + SAP BTP)
+# ============================================================
+
+# ------------------------------------------------------------
+# Maven
+# ------------------------------------------------------------
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.properties
+
+# ------------------------------------------------------------
+# CAP / CDS Artifacts
+# ------------------------------------------------------------
+# Generated CDS files
+gen/
+@cds-models/
+.cds-livereload
+*.cds.json
+
+# CAP SQLite DB (local development)
+*.db
+*.sqlite
+*.sqlite3
+db.sqlite
+
+# CDS build output
+app/*/dist/
+srv/*/dist/
+
+# ------------------------------------------------------------
+# Spring Boot / Java
+# ------------------------------------------------------------
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+# Spring Boot DevTools restart trigger file
+.spring-boot-devtools.properties
+
+# Application secrets / local overrides
+application-local.properties
+application-local.yml
+application-secret.properties
+application-secret.yml
+
+# ------------------------------------------------------------
+# SAP BTP / Cloud Foundry
+# ------------------------------------------------------------
+# MTA build artifacts
+mta_archives/
+*.mtar
+.mta_tmp/
+
+# CF login cache (contains tokens)
+.cfconfig.json
+~/.cf/
+
+# XSUAA / BTP service keys (NEVER commit these)
+default-services.json
+default-env.json
+private-key.pem
+*.pfx
+*.p12
+*.jks
+
+# SAP Business Application Studio
+.theia/
+.che/
+
+# ------------------------------------------------------------
+# IDE & Editors
+# ------------------------------------------------------------
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+bin/
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ------------------------------------------------------------
+# Node.js (CAP CDS tooling, UI5 apps)
+# ------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+package-lock.json
+yarn.lock
+
+# ------------------------------------------------------------
+# Logs
+# ------------------------------------------------------------
+logs/
+*.log
+spring.log
+
+# ------------------------------------------------------------
+# OS
+# ------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ------------------------------------------------------------
+# Sensitive / Environment
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+secrets/
+credentials/
+serviceKey*.json
+service-account*.json
+
+# ------------------------------------------------------------
+# Test / Coverage
+# ------------------------------------------------------------
+/test-results/
+/coverage/
+*.exec
+jacoco.xml
+surefire-reports/

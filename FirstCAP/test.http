@@ -4,10 +4,46 @@
 
 # CREATE Books
 
+# POST http://localhost:8080/odata/v4/bookshop/Books
+# Content-Type: application/json
+
+# {
+#     "ID": 3,
+#     "title": "4 Hours Work week"
+# }
+
+# Update - PUT/PATCH
+# PUT http://localhost:8080/odata/v4/bookshop/Books(2)
+# Content-Type: application/json
+
+# {
+#     "title": "Rich Dad and Poor Dad"
+# }
+
+# PATCH http://localhost:8080/odata/v4/bookshop/Books(2)
+# Content-Type: application/json
+
+# {
+#     "title": "Rich Dad and Poor Dad 2222"
+# }
+
+
+# DELETE
+
+# DELETE http://localhost:8080/odata/v4/bookshop/Books(2)
+
+# after CUID
+
 POST http://localhost:8080/odata/v4/bookshop/Books
 Content-Type: application/json
 
 {
-    "ID": 3,
     "title": "4 Hours Work week"
 }
+
+# PUT http://localhost:8080/odata/v4/bookshop/Books(e1a98f3c-ee42-4c73-9813-474bedb6bfc0)
+# Content-Type: application/json
+
+# {
+#     "title": "Alchamist"
+# }

@@ -1,44 +1,49 @@
-using { cuid } from '@sap/cds/common';
+using {cuid} from '@sap/cds/common';
 
 
-service bookshop{
+service bookshop {
 
     //managed association - when rule will be manged by CAPM
+    //1 - 1 relationship
     entity Books: cuid {
         title : String;
         author : Association to Authors;
     }
 
-    entity Authors: cuid {
+    //unmanged association - when we are going to define the Rule
+    // entity Books : cuid {
+    //     title             : String;
+    //     author_foreignKey : type of Authors : ID;
+    //     author            : Association to Authors
+    //                             on author.ID = author_foreignKey;
+    // }
+
+    // entity Authors : cuid {
+    //     name : String;
+    // }
+
+    //relationship -> to many 
+    entity Authors : cuid {
         name : String;
+        book : Association to many Books
+                   on book.author = $self;
     }
 
-    //unmanged association - when we are going to define the Rule
+    //Composition
+    entity Orders : cuid {
+        customer : String;
+        Items    : Composition of many OrderItems
+                       on Items.parent = $self;
+    }
+
+    entity OrderItems {
+        key parent   : Association to Orders;
+        key position : Integer;
+            quantity : Integer;
+    }
+
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

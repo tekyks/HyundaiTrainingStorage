@@ -1,0 +1,16 @@
+# GET http://localhost:8080/odata/v4/Bookshop/Books
+# Accept: application/json
+# Authorization: Basic user2:pass2
+
+# POST http://localhost:8080/odata/v4/Bookshop/Books
+# Content-Type: application/json
+# Authorization: Basic user2:pass2
+
+# {
+#     "title": "4 Hours Work Week"
+# }
+
+
+GET http://localhost:8080/odata/v4/AdminServive/ConfidentialData
+Accept: application/json
+Authorization: Basic admin:adminpass

@@ -92,11 +92,6 @@
           "pattern": "SalesOrderHeader({key}):?query:",
           "name": "SalesOrderHeaderObjectPage",
           "target": "SalesOrderHeaderObjectPage"
-        },
-        {
-          "pattern": "SalesOrderHeader({key})/SOItems({key2}):?query:",
-          "name": "SalesOrderItemsObjectPage",
-          "target": "SalesOrderItemsObjectPage"
         }
       ],
       "targets": {
@@ -133,24 +128,7 @@
             "settings": {
               "editableHeaderContent": false,
               "contextPath": "/SalesOrderHeader",
-              "navigation": {
-                "SOItems": {
-                  "detail": {
-                    "route": "SalesOrderItemsObjectPage"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "SalesOrderItemsObjectPage": {
-          "type": "Component",
-          "id": "SalesOrderItemsObjectPage",
-          "name": "sap.fe.templates.ObjectPage",
-          "options": {
-            "settings": {
-              "editableHeaderContent": false,
-              "contextPath": "/SalesOrderHeader/SOItems"
+              "navigation": {}
             }
           }
         }

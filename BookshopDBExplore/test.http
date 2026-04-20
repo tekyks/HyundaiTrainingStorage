@@ -1,0 +1,10 @@
+
+# GET http://localhost:8080/odata/v4/bookshop/Books
+
+
+POST http://localhost:8080/odata/v4/bookshop/Books
+Content-Type: application/json
+
+{
+    "title": "Deep Work"
+}

@@ -1,0 +1,30 @@
+
+---
+spring:
+  config.activate.on-profile: default
+  sql.init.platform: h2
+cds:
+  data-source.auto-config.enabled: false
+  security:
+    mock:
+      users:
+        - name: user1
+          password: pass1
+          additional:
+            firstName: user1
+            lastName: test
+            email: user1@test.com
+        - name: user2
+          password: pass2
+          additional:
+            firstName: user2
+            lastName: test
+            email: user2@test.com
+        - name: admin
+          password: adminpass
+          roles:
+            - Administrator
+          additional:
+            firstName: admin
+            lastName: test
+            email: admin@test.com

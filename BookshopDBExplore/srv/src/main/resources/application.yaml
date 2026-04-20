@@ -1,0 +1,13 @@
+
+---
+spring:
+  config.activate.on-profile: default
+  sql.init.platform: h2
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+cds:
+  data-source.auto-config.enabled: false

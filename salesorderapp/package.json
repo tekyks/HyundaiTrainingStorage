@@ -6,5 +6,6 @@
   },
   "sapux": [
     "app/salesorderui"
-  ]
+  ],
+  "dependencies": {}
 }

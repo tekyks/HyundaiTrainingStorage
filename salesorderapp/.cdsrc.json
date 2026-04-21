@@ -1,2 +1,11 @@
 {
+  "requires": {
+    "[production]": {
+      "db": "hana",
+      "auth": "xsuaa"
+    },
+    "html5-repo": true,
+    "destinations": true,
+    "workzone": true
+  }
 }

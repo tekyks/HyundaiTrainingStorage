@@ -21,7 +21,19 @@
         "type": "OData",
         "settings": {
           "annotations": [],
-          "odataVersion": "4.01"
+          "odataVersion": "4.0"
+        }
+      }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "salesorderui-display": {
+          "semanticObject": "salesorderui",
+          "action": "display",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
         }
       }
     }
@@ -143,5 +155,9 @@
     "app": {
       "enableLazyLoading": true
     }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "salesorderapp.service"
   }
 }

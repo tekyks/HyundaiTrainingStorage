@@ -1,12 +1,12 @@
 namespace techyks.api;
 
-using {cuid} from '@sap/cds/common';
+using {cuid, managed} from '@sap/cds/common';
 
-entity Books: cuid {
+entity Books: cuid, managed {
     title: String;
 }
 
-entity Authors: cuid {
+entity Authors: cuid, managed {
     name: String;
 }
 

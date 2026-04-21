@@ -1,6 +1,6 @@
 # GET http://localhost:8080/odata/v4/Bookshop/Books
 # Accept: application/json
-# Authorization: Basic user2:pass2
+# Authorization: Basic user1:pass1
 
 # POST http://localhost:8080/odata/v4/Bookshop/Books
 # Content-Type: application/json
@@ -11,6 +11,58 @@
 # }
 
 
-GET http://localhost:8080/odata/v4/AdminServive/ConfidentialData
-Accept: application/json
-Authorization: Basic admin:adminpass
+# GET http://localhost:8080/odata/v4/AdminServive/ConfidentialData
+# Accept: application/json
+# # Authorization: Basic user2:pass2
+# Authorization: Basic admin:adminpass
+
+
+#-------------Test data 1----------------
+
+# POST http://localhost:8080/odata/v4/Bookshop/Books
+# Content-Type: application/json
+# Authorization: Basic user1:pass1
+
+# {
+#     "title": "User 1 created Book"
+# }
+
+
+
+# POST http://localhost:8080/odata/v4/Bookshop/Books
+# Content-Type: application/json
+# Authorization: Basic user2:pass2
+
+# {
+#     "title": "User 2 created Book"
+# }
+
+
+# GET http://localhost:8080/odata/v4/Bookshop/Books
+# Accept: application/json
+# Authorization: Basic admin:adminpass
+
+
+#-------------Test data 2----------------
+
+# POST http://localhost:8080/odata/v4/Bookshop/Authors
+# Content-Type: application/json
+# Authorization: Basic admin:adminpass
+
+# {
+#     "name": "Tim Ferris"
+# }
+
+
+# PUT http://localhost:8080/odata/v4/Bookshop/Authors(27a9112a-a349-4895-b707-32f1d0b28283)
+# Content-Type: application/json
+# Authorization: Basic admin:adminpass
+
+# {
+#     "name": "Tim Ferris - Updated"
+# }
+
+
+# GET http://localhost:8080/odata/v4/Bookshop/Authors
+# Accept: application/json
+# Authorization: Basic user1:pass1

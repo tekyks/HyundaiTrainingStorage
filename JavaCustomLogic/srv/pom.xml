@@ -2,15 +2,15 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<artifactId>BookshopSecurityExplore-parent</artifactId>
+		<artifactId>JavaCustomLogic-parent</artifactId>
 		<groupId>customer</groupId>
 		<version>${revision}</version>
 	</parent>
 
-	<artifactId>BookshopSecurityExplore</artifactId>
+	<artifactId>JavaCustomLogic</artifactId>
 	<packaging>jar</packaging>
 
-	<name>BookshopSecurityExplore</name>
+	<name>JavaCustomLogic</name>
 
 	<!-- ACTUAL DEPENDENCIES -->
 	<dependencies>
@@ -43,18 +43,6 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
-		<!-- techyks- newly added Security Config -->
-		<dependency>
-			<groupId>com.sap.cds</groupId>
-			<artifactId>cds-starter-cloudfoundry</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
 	</dependencies>
 
 	<build>

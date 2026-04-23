@@ -1,0 +1,28 @@
+# GET http://localhost:8080/odata/v4/BookshopService/Books
+
+# GET http://localhost:8080/odata/v4/BookshopService/getMeSomething()
+
+# GET http://localhost:8080/odata/v4/BookshopService/totalStock()
+
+# GET http://localhost:8080/odata/v4/BookshopService/Books(75610a77-597f-54ae-b696-00b6b79dde00)/stockValue()
+
+
+# POST http://localhost:8080/odata/v4/BookshopService/Books(75610a77-597f-54ae-b696-00b6b79dde00)/setPrice
+# Content-Type: application/json
+
+# {
+#     "price":77
+# }
+
+
+POST http://localhost:8080/odata/v4/BookshopService/submitBookOrder
+Content-Type: application/json
+
+{
+    "id": "75610a78-597f-54ae-b696-00b6b79dde00",
+    "stock": 7
+}
+
+
+
+#{"SELECT":{"from":{"ref":[{"id":"BookshopService.Books","where":[{"ref":["ID"]},"=",{"val":"75610a77-597f-54ae-b696-00b6b79dde00"}]}]}}}

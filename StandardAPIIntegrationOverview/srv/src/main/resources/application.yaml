@@ -1,0 +1,19 @@
+
+---
+spring:
+  config:
+    activate:
+      on-profile: default
+  sql:
+    init:
+      platform: h2
+cds:
+  data-source:
+    auto-config:
+      enabled: false
+  remote:
+    services:
+      '[OP_API_SALES_ORDER_SRV_0001]':
+        destination:
+          name: OP_API_SALES_ORDER_SRV_0001
+        type: odata-v2
